@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Drawer Example</title>
+    <link rel="stylesheet" href="../css/menu-lateral.css">
+</head>
+<body>
+    <div id="drawer" class="drawer">
+        <div class="drawer-content">
+            <button class="close-btn" onclick="toggleDrawer()">×</button>
+            <!-- <nav> -->
+                <ul>
+                    <h2>MENU</h2>
+                    <li><a href="menu-lateral.html">Início</a></li>
+                    <li><li><a href="../html/visualizar-sala.html">Gerir salas</a></li>
+                    <li><a href="../html/alocacao-sala.html">Alocar salas</a></li>
+                    <li><a href="../html/indisponibilizar-sala.html">Indisponibilidade</a></li>			    
+                </ul>
+            <!-- </nav> -->
+        </div>
+    </div>
+
+    <div class="main-content">
+        <button class="hamburger" onclick="toggleDrawer()">☰</button>
+        <h1>Alocação de salas</h1>
+        <p>Clique no menu acima para iniciar.</p>
+    </div>
+
+    <script src="../js/menu-lateral.js"></script>
+</body>
+</html>

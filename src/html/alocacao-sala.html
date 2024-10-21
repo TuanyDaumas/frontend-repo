@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Salas</title>
+    <link rel="stylesheet" href="../css/alocacao-sala.css">
+    <link rel="stylesheet" href="../css/menu-lateral.css">
+</head>
+<body>
+    <div id="drawer" class="drawer">
+        <div class="drawer-content">
+            <button class="close-btn" onclick="toggleDrawer()">×</button>
+                <ul>
+                    <h2>MENU</h2>
+		    <li><a href="menu-lateral.html">Início</a></li>
+                    <li><a href="../html/visualizar-sala.html">Gerir salas</a></li>
+                    <li><a href="../html/alocacao-sala.html">Alocar salas</a></li>
+                    <li><a href="../html/indisponibilizar-sala.html">Indisponibilidade</a></li>		    
+                </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <button class="hamburger" onclick="toggleDrawer()">☰</button>
+        <h1>Alocação de salas</h1>
+    </div>
+
+    <div class="container">
+        <h1>Salas</h1>
+        <div class="form-container">
+            <form class="sala-form">
+                <div class="form-group">
+                    <label for="bloco">Bloco</label>
+                    <input type="text" id="bloco" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="numero">Número</label>
+                    <input type="text" id="numero" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="capacidade">Capacidade</label>
+                    <input type="number" id="capacidade" placeholder="">
+                </div>
+                <div class="form-group-radio">
+                    <label>Ar</label>
+                    <label><input type="radio" name="ar" value= true ></label>
+                </div>
+                <div class="form-group-radio">
+                    <label>Lousa</label>
+                    <label><input type="radio" name="lousa" value=true></label>
+                </div>
+                <div class="form-group-radio">
+                    <label>Lab</label>
+                    <label><input type="radio" name="lab" value=true></label>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn-indisponibilidade">Indisponibilidade</button>
+                    <button type="submit" class="btn-salvar">Salvar</button>
+                </div>
+            </form>
+        </div>
+
+        <table class="salas-table">
+            <thead>
+                <tr>
+                    <th>Bloco</th>
+                    <th>Número</th>
+                    <th>Capacidade</th>
+                    <th>Ar</th>
+                    <th>Lousa</th>
+                    <th>Lab</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>201</td>
+                    <td>50</td>
+                    <td>Sim</td>
+                    <td>Sim</td>
+                    <td>Não</td>
+                    <td>
+                        <button class="btn-editar">Editar</button>
+                        <button class="btn-excluir">Excluir</button>
+                        <button class="btn-indisponibilizar">Indisponibilizar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../js/menu-lateral.js"></script>
+</body>
+</html>
