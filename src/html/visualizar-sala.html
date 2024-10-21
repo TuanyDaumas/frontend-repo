@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alocar Salas</title>
+  <link rel="stylesheet" href="../css/visualizar-sala.css">
+  <link rel="stylesheet" href="../css/menu-lateral.css">
+</head>
+
+<body>
+    <div id="drawer" class="drawer">
+        <div class="drawer-content">
+            <button class="close-btn" onclick="toggleDrawer()">×</button>
+                <ul>
+                    <h2>MENU</h2>
+                    
+		    <li><a href="menu-lateral.html">Início</a></li>
+		    <li><li><a href="../html/visualizar-sala.html">Gerir salas</a></li>
+            <li><a href="../html/alocacao-sala.html">Alocar salas</a></li>
+            <li><a href="../html/indisponibilizar-sala.html">Indisponibilidade</a></li>				    
+                </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <button class="hamburger" onclick="toggleDrawer()">☰</button>
+    </div>
+  <div class="container">
+    <h1>Visualizar Salas</h1>
+
+    <!-- Seção de seleção inicial -->
+    <form class="alocacao-form">
+      <div class="form-group">
+        <label for="dia">Dia</label>
+        <select id="dia">
+          <option value="segunda">Segunda</option>
+          <option value="terça">Terça</option>
+          <option value="quarta">Quarta</option>
+          <option value="quinta">Quinta</option>
+          <option value="sexta">Sexta</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="sala">Sala</label>
+        <input type="text" id="sala" list="salas" placeholder="Digite ou selecione a sala">
+        <datalist id="salas">
+          <option value="A201">
+          <option value="A202">
+          <option value="B101">
+        </datalist>
+      </div>
+      <div class="form-group">
+        <label for="horario">Horário</label>
+        <select id="horario">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+    </form>
+
+    <!-- Botão de pesquisa -->
+    <div class="buttons">
+      <button type="button" class="btn-pesquisa" onclick="pesquisarDisciplinas()">Pesquisa</button>
+    </div>
+    <br>
+    <!-- Tabela de disciplinas -->
+    <h2>Disciplinas Disponíveis</h2>
+    <table class="disciplinas-table">
+      <thead>
+        <tr>
+          <th>Selecionar</th>
+          <th>Disciplina</th>
+          <th>Professor</th>
+          <th>Características</th>
+        </tr>
+      </thead>
+      <tbody id="disciplinas-tbody">
+        <!-- Disciplinas serão inseridas aqui pelo JavaScript -->
+      </tbody>
+    </table>
+
+    <!-- Botão de salvar -->
+    <div class="buttons">
+      <button type="button" class="btn-salvar" onclick="salvarAlocacao()">Salvar</button>
+    </div>
+
+    <!-- Mensagem de sucesso -->
+    <div id="mensagem-sucesso" class="mensagem-sucesso" style="display: none;">
+      Alocação salva com sucesso!
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="../js/menu-lateral.js"></script>
+</body>
+
+</html>

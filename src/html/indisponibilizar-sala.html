@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indisponibilidade de Sala</title>
+    <link rel="stylesheet" href="../css/indisponibilizar-sala.css">
+    <link rel="stylesheet" href="../css/menu-lateral.css">
+</head>
+<body>
+
+    <div id="drawer" class="drawer">
+        <div class="drawer-content">
+            <button class="close-btn" onclick="toggleDrawer()">×</button>
+                <ul>
+                    <h2>MENU</h2>
+                    
+		    <li><a href="menu-lateral.html">Início</a></li>
+                    <li><a href="../html/visualizar-sala.html">Gerir salas</a></li>
+                    <li><a href="../html/alocacao-sala.html">Alocar salas</a></li>
+                    <li><a href="../html/indisponibilizar-sala.html">Indisponibilidade</a></li>			    
+                </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <button class="hamburger" onclick="toggleDrawer()">☰</button>
+    </div>
+    
+
+    <div class="container">
+        
+        <h1>Indisponibilizar Sala</h1>
+        <form class="indisponibilidade-form">
+            <div class="form-group">
+                <label for="bloco">Bloco</label>
+                <input type="text" id="bloco" placeholder="Bloco">
+            </div>
+            <div class="form-group">
+                <label for="numero">Número</label>
+                <input type="text" id="numero" placeholder="Número">
+            </div>
+
+            <h2>Total</h2>
+            <table class="indisponibilidade-table">
+                <thead>
+                    <tr>
+                        <th>HORÁRIO</th>
+                        <th>SEG</th>
+                        <th>TER</th>
+                        <th>QUA</th>
+                        <th>QUI</th>
+                        <th>SEX</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td onclick="toggleSelect(this)"> </td>
+                        <td onclick="toggleSelect(this)"> </td>
+                        <td onclick="toggleSelect(this)"> </td>
+                        <td onclick="toggleSelect(this)"> </td>
+                        <td onclick="toggleSelect(this)"> </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td onclick="toggleSelect(this)"> </td>
+                        <td onclick="toggleSelect(this)"> </td>
+                        <td onclick="toggleSelect(this)"> </td>
+                        <td onclick="toggleSelect(this)"> </td>
+                        <td onclick="toggleSelect(this)"> </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td onclick="toggleSelect(this)"> </td>
+                        <td onclick="toggleSelect(this)"> </td>
+                        <td onclick="toggleSelect(this)"> </td>
+                        <td onclick="toggleSelect(this)"> </td>
+                        <td onclick="toggleSelect(this)"> </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button type="button" class="btn-salvar" onclick="salvarIndisponibilidade()">Salvar</button>
+        </form>
+    </div>
+
+    <script>
+        function toggleSelect(cell) {
+            cell.classList.toggle('selected');
+        }
+
+        function salvarIndisponibilidade() {
+            const selectedCells = document.querySelectorAll('.selected');
+            const indisponibilidade = [];
+            
+            selectedCells.forEach(cell => {
+                const horario = cell.parentElement.cells[0].textContent;
+                const dia = cell.cellIndex;
+                indisponibilidade.push({ horario, dia });
+            });
+
+            console.log('Indisponibilidade salva:', indisponibilidade);
+            alert('Indisponibilidade salva com sucesso!');
+        }
+    </script>
+
+    <script src="../js/menu-lateral.js"></script>
+</body>
+</html>
