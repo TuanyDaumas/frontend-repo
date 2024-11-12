@@ -4,28 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Salas</title>
-    <link rel="stylesheet" href="../css/alocacao-sala.css">
-    <link rel="stylesheet" href="../css/menu-lateral.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="drawer" class="drawer">
-        <div class="drawer-content">
-            <button class="close-btn" onclick="toggleDrawer()">×</button>
-                <ul>
-                    <h2>MENU</h2>
-		    <li><a href="menu-lateral.html">Início</a></li>
-                    <li><a href="../html/visualizar-sala.html">Gerir salas</a></li>
-                    <li><a href="../html/alocacao-sala.html">Alocar salas</a></li>
-                    <li><a href="../html/indisponibilizar-sala.html">Indisponibilidade</a></li>		    
-                </ul>
-        </div>
-    </div>
-
-    <div class="main-content">
-        <button class="hamburger" onclick="toggleDrawer()">☰</button>
-        <h1>Alocação de salas</h1>
-    </div>
-
     <div class="container">
         <h1>Salas</h1>
         <div class="form-container">
@@ -44,19 +25,21 @@
                 </div>
                 <div class="form-group-radio">
                     <label>Ar</label>
-                    <label><input type="radio" name="ar" value= true ></label>
+                    <label><input type="radio" name="ar" value="Sim"> Sim</label>
+                    <label><input type="radio" name="ar" value="Não"> Não</label>
                 </div>
                 <div class="form-group-radio">
                     <label>Lousa</label>
-                    <label><input type="radio" name="lousa" value=true></label>
+                    <label><input type="radio" name="lousa" value="Sim"> Sim</label>
+                    <label><input type="radio" name="lousa" value="Não"> Não</label>
                 </div>
                 <div class="form-group-radio">
                     <label>Lab</label>
-                    <label><input type="radio" name="lab" value=true></label>
+                    <label><input type="radio" name="lab" value="Sim"> Sim</label>
+                    <label><input type="radio" name="lab" value="Não"> Não</label>
                 </div>
                 <div class="buttons">
-                    <button type="button" class="btn-indisponibilidade">Indisponibilidade</button>
-                    <button type="submit" class="btn-salvar">Salvar</button>
+                    <button type="button" class="btn-salvar">Salvar</button>
                 </div>
             </form>
         </div>
@@ -74,23 +57,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>A</td>
-                    <td>201</td>
-                    <td>50</td>
-                    <td>Sim</td>
-                    <td>Sim</td>
-                    <td>Não</td>
-                    <td>
-                        <button class="btn-editar">Editar</button>
-                        <button class="btn-excluir">Excluir</button>
-                        <button class="btn-indisponibilizar">Indisponibilizar</button>
-                    </td>
-                </tr>
+                
             </tbody>
         </table>
     </div>
 
-    <script src="../js/menu-lateral.js"></script>
+    <script src="styles.js"></script>
 </body>
 </html>
