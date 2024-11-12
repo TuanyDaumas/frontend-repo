@@ -5,7 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Salas</title>
     <link rel="stylesheet" href="../css/alocacao-sala.css">
+    <link rel="stylesheet" href="../css/menu-lateral.css">
 </head>
+
+<div id="drawer" class="drawer">
+        <div class="drawer-content">
+            <button class="close-btn" onclick="toggleDrawer()">×</button>
+                <ul>
+                    <h2>MENU</h2>
+                    
+            <li><a href="menu-lateral.html">Início</a></li>
+                    <li><a href="../html/visualizar-sala.html">Gerir salas</a></li>
+                    <li><a href="../html/alocacao-sala.html">Alocar salas</a></li>
+                    <li><a href="../html/indisponibilizar-sala.html">Indisponibilidade</a></li>			    
+                </ul>
+        </div>
+</div>
+
+<div class="main-content">
+        <button class="hamburger" onclick="toggleDrawer()">☰</button>
+</div>
+
 <body>
     <div class="container">
         <h1>Salas</h1>
@@ -62,6 +82,7 @@
         </table>
     </div>
 
-    <script src="styles.js"></script>
+    <script src="../js/menu-lateral.js"></script>
+    <script src="../js/alocacao-sala.js"></script>
 </body>
 </html>

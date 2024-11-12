@@ -67,6 +67,9 @@ body {
 }
 
 .hamburger {
+    position: fixed; /* Fixa o botão na tela */
+    top: 05px; /* Alinha o botão no topo */
+    left: 20px; /* Posiciona o botão no lado esquerdo */
     background: none;
     border: none;
     font-size: 30px;
