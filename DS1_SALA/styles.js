@@ -37,7 +37,6 @@ document.querySelector('.btn-salvar').addEventListener('click', function () {
             <td>${lab}</td>
             <td>
                 <button class="btn-editar">Editar</button>
-                <button class="btn-excluir">Excluir</button>
                 <button class="btn-indisponibilizar">Indisponibilizar</button>
             </td>
         `;
@@ -68,11 +67,5 @@ document.querySelector('.salas-table').addEventListener('click', function (e) {
         document.querySelector(`input[name="ar"][value="${ar ? 'Sim' : 'Não'}"]`).checked = true;
         document.querySelector(`input[name="lousa"][value="${lousa ? 'Sim' : 'Não'}"]`).checked = true;
         document.querySelector(`input[name="lab"][value="${lab ? 'Sim' : 'Não'}"]`).checked = true;
-    }
-
-    // Função para excluir uma linha
-    if (e.target.classList.contains('btn-excluir')) {
-        const linha = e.target.closest('tr'); // Encontra a linha correspondente
-        linha.remove(); // Remove a linha da tabela
     }
 });
